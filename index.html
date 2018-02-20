@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaky iFrame</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="iframe-memory-leak-detector.js"></script>
+        <script>
+            $(document).ready(function(){
+                if (location.protocol === 'file:') {
+                    $("body").html("<h1>This demo needs to run on a webserver or localhost, it will not work properly over file://</h1>");
+                }
+
+                $("#detectLeaks").on('click', function(){
+                    window.searchForCrossFrameReferences(window);
+                });
+            });
+        </script>
+        <style>
+            iframe {
+                width: 900px;
+                height: 500px;
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe src="leakyIFrame.html"></iframe>
+        <button id="detectLeaks">run iframe memory leak detector</button>
+    </body>
+</html>
