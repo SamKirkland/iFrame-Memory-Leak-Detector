@@ -2,7 +2,7 @@
 
 Detects cross frame references that prevent iFrames from being garbage collected
 
-[Demo](samkirkland.com/labs/iFrame-Memory-Leak-Detector/index.html)
+[Demo](http://samkirkland.com/labs/iFrame-Memory-Leak-Detector/index.html)
 
 ## Screen shots:
 ![Screen shot of console output](https://raw.githubusercontent.com/SamKirkland/iFrame-Memory-Leak-Detector/master/output.png)
